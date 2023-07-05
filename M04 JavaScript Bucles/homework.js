@@ -102,9 +102,11 @@ function esEntero(num) {
    // Ejemplo: (-10) ---> true
    // De lo contrario, retorna false.
    // Tu código:
-   if (num.esEntero || num === 0 || num >0 || num <0)
-   return true;
-   else return false
+  if (Math.floor(num) === num){
+   return true
+  } else{
+   return false
+  }
 }
 
 function fizzBuzz(num) {
@@ -150,15 +152,15 @@ function esPrimo(num) {
    // [Pista 2]: puedes resolverlo utilizando un `bucle for`.
    // [Nota]: los números negativos, 0 y 1 NO son números primos.
    // Tu código:
-    
-  
-  for (i = 2; i = num; i++){
-   if (num % num === 0 && num % 1 ===0){
-   return true
-  } if (num<= 1 || num % num !== 0 || num % 1 !== 0){
-   return false 
-  }
-}
+   if (num<= 1){
+      return false 
+     }
+     
+     for (i = 2; i <= num / 2; i++){
+      if (num % i === 0){
+      return false
+     } 
+   } return true
 }
 
 function esVerdadero(valor) {
@@ -174,9 +176,12 @@ function tieneTresDigitos(num) {
    // Si el número recibido tiene tres dígitos retornar true.
    // Caso contrario, retornar false.
    // Tu código:
-   if (num >= 100 && num <= 999 ){
-   return true;}
-   else false
+   if (num >= 100 && num <= 999) {
+      return true;
+    } else {
+      return false;
+    }
+
 }
 
 function doWhile(num) {
@@ -184,11 +189,12 @@ function doWhile(num) {
    // Retornar el valor final.
    // Utilizar el bucle Do-While.
    // Tu código:
-   let i = 0
+   var contador = 0
    do {
-      i = i + 5
-      num = i
-   } while (i <=40)
+      num += 5;
+      contador ++;
+   } while (contador < 8);
+   return num
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
